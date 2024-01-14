@@ -1,0 +1,109 @@
+body {
+    display: grid;
+    justify-items: center;
+    background-color: #111a1a;
+    color: white;
+}
+
+.heseg {
+    margin-top: 175px;
+    display: flex;
+}
+
+.Puuz {
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    justify-items: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 7px rgba(223, 222, 222, 0.7));
+}
+
+.shirt {
+    margin-left: 250px;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    justify-items: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 7px rgba(223, 222, 222, 0.7));
+}
+
+.productImage {
+    grid-column: 1/span 2;
+    grid-row: 1 /span 2;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    transition: all 0.7s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.hemjee,
+.color {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+li {
+    list-style: none;
+    width: auto;
+    height: 15px;
+    margin-top: 7px;
+    padding: 5px;
+    background-color: rgba(27, 27, 27, 0.5);
+}
+
+.color {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.color ul li,
+p {
+    border-radius: 3px;
+    width: auto;
+    height: 15px;
+    display: block;
+}
+
+.price {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+
+.price p {
+    width: auto;
+    height: 15px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.productName {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    transition: all 0.7s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.productImage:hover {
+    transform: rotate(-15deg);
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.productImage:hover~* {
+    opacity: 1;
+    transform: rotate(-15deg);
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
